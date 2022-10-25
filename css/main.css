@@ -39,6 +39,23 @@ header {
     position: relative;
 }
 
+.navigation__dropdown__label:hover {
+    cursor: pointer;
+    user-select: none;
+}
+
+.navigation__dropdown__label__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.navigation__dropdown__label__text:hover {
+    color: var(--color-tertiary);
+    fill: var(--color-tertiary);
+}
+
 .navigation__dropdown__submenu {
     list-style: none;
     position: absolute;
@@ -57,10 +74,6 @@ header {
     margin: 0 2rem;
 }
 
-.navigation__dropdown__label:hover {
-    cursor: pointer;
-    user-select: none;
-}
 
 .navigation__dropdown__checkbox {
     display: none;
