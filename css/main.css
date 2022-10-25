@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3.2rem;
+
+}
+
+body>* {
+    width: 100%;
+}
+
+header {
+    font-size: 6rem;
+    color: var(--color-tertiary);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    border-bottom: 0.5rem solid var(--color-secondary);
+    justify-content: flex-start;
+}
+
+nav ul li {
+    padding: 0 2rem;
+    font-size: 2rem;
+}
+
+nav ul li:last-child {
+    margin-left: auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: var(--color-tertiary);
+}
+
+footer {
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-top: 0.5rem solid var(--color-secondary);
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
