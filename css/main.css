@@ -36,24 +36,31 @@ header {
     color: black;
     text-decoration: none;
     transition: all 0.2s;
-    position: relative;
-}
-
-.navigation__dropdown__label:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     user-select: none;
 }
 
-.navigation__dropdown__label__text {
+.navigation__dropdown__label:hover {
+    color: var(--color-tertiary);
+    fill: var(--color-tertiary);
+}
+
+.navigation__dropdown {
+    position: relative;
+}
+
+.navigation__dropdown {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.2s;
 }
 
-.navigation__dropdown__label__text:hover {
-    color: var(--color-tertiary);
-    fill: var(--color-tertiary);
+.navigation__dropdown__checkbox {
+    display: none;
 }
 
 .navigation__dropdown__submenu {
@@ -65,18 +72,13 @@ header {
     width: min-content;
     background-color: var(--color-primary);
     border-top: 0.5rem solid var(--color-secondary);
-    left: -2rem;
+    top: 2.4rem;
     transition: all 0.2s;
 }
 
 .navigation__dropdown__submenu li {
     padding: 0.5rem 0;
     margin: 0 2rem;
-}
-
-
-.navigation__dropdown__checkbox {
-    display: none;
 }
 
 .navigation__dropdown__checkbox:checked~ul.navigation__dropdown__submenu {
@@ -132,7 +134,7 @@ footer {
     background-color: var(--color-primary);
 }
 
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-width: 1366px) {
     .hero {
         background-attachment: scroll;
     }
