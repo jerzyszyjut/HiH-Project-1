@@ -2,7 +2,6 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 3.2rem;
-
 }
 
 body>* {
@@ -47,6 +46,19 @@ a:hover {
     color: var(--color-tertiary);
 }
 
+.hero {
+    background-image: url('../images/The_School_of_Athens.jpg');
+    min-height: 40rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    height: 200rem;
+}
+
 footer {
     font-size: 1.4rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -54,4 +66,10 @@ footer {
     position: fixed;
     bottom: 0;
     text-align: center;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .hero {
+        background-attachment: scroll;
+    }
 }
