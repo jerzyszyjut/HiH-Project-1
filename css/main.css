@@ -69,11 +69,11 @@ header {
     visibility: hidden;
     display: block;
     opacity: 0%;
-    width: min-content;
     background-color: var(--color-primary);
     border-top: 0.5rem solid var(--color-secondary);
     top: 2.4rem;
     transition: all 0.2s;
+    width: 130%;
 }
 
 .navigation__dropdown__submenu li {
@@ -122,6 +122,7 @@ a:hover {
 section {
     border-top: 1px solid var(--color-secondary);
     border-bottom: 1px solid var(--color-secondary);
+    padding: 2rem 0;
 }
 
 footer {
