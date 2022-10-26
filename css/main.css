@@ -103,6 +103,10 @@ input {
     font-size: 2rem;
 }
 
+.navigation__list__element.active {
+    color: var(--color-tertiary);
+}
+
 .navigation__list>.navigation__list__element:last-child {
     margin-left: auto;
 }
