@@ -24,6 +24,7 @@
             <li class="navigation__list__element"><a class="navigation__link" href="ksiazki.html">Książki</a></li>
             <li class="navigation__list__element"><a class="navigation__link" href="cytaty.html">Cytaty</a></li>
             <li class="navigation__dropdown navigation__list__element">
+                <input id="dropdown_checkbox" type="checkbox" name="Filozofowie" class="navigation__dropdown__checkbox">
                 <label for="dropdown_checkbox" class="navigation__dropdown__label">
                     Filozofowie
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36">
@@ -31,7 +32,6 @@
                         <path d="M0 0h36v36h-36z" fill="none" />
                     </svg>
                 </label>
-                <input id="dropdown_checkbox" type="checkbox" name="Filozofowie" class="navigation__dropdown__checkbox">
                 <ul class="navigation__dropdown__submenu">
                     <li class="navigation__list__element"><a class="navigation__link"
                             href="presokratycy.html">Presokratycy</a></li>
@@ -49,7 +49,7 @@
         </ul>
     </nav>
     <div class="wrapper">
-        <div class="hero"></div>
+        <div class="hero" id="hero1"></div>
         <div class="content">
             <section>
                 <h1>Czym jest filozofia?</h1><br>
@@ -94,6 +94,77 @@
                     doświadczają lęku przed kosmiczną samotnością...
                 </p><br><br>
                 <p>Źródło: <em>Dzieje zachodniej filozofii, Wprowadzenie - Bertrand Russell</em></p>
+            </section>
+        </div>
+        <div class="hero" id="hero2"></div>
+        <div class="content">
+            <section>
+                <h1>Ankieta</h1>
+                <form class="poll" action="./ankieta.php" method="POST">
+                    <fieldset>
+                        <legend>Informacje o tobie</legend>
+                        <label for="age" class="poll__question_label">Wiek:</label>
+                        <input type="number" id="age" name="age" min="0" max="100" required>
+                        <label class="poll__question_label">Płeć:</label>
+                        <span>
+                            <input type="radio" name="gender" id="male" value="m" required>
+                            <label for="male">Mężczyzna</label>
+                        </span>
+                        <span>
+                            <input type="radio" name="gender" id="female" value="f" required>
+                            <label for="female">Kobieta</label>
+                        </span>
+                        <label for="education" class="poll__question_label">Wykształcenie:</label>
+                        <select id="education" name="education" required>
+                            <option value="0">Podstawowe</option>
+                            <option value="1">Średnie</option>
+                            <option value="2">W trakcie studiów</option>
+                            <option value="3">Wyższe</option>
+                        </select>
+                        <label for="color" class="poll__question_label">Ulubiony kolor:</label>
+                        <input type="color" id="color" name="color">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Ankieta właściwa</legend>
+                        <label class="poll__question_label">Z jakimi szkołami filozoficznymi starożytności miałeś
+                            styczność?</label>
+                        <span>
+                            <input type="checkbox" name="schools" id="sofisci" value="sofisci">
+                            <label for="sofisci">Sofiści</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="schools" id="platonicy" value="platonicy">
+                            <label for="platonicy">Platonicy</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="schools" id="arystotelicy" value="arystotelicy">
+                            <label for="arystotelicy">Arystotelicy</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="schools" id="stoicy" value="stoicy">
+                            <label for="stoicy">Stoicy</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="schools" id="epikurejczycy" value="epikurejczycy">
+                            <label for="epikurejczycy">Epikurejczycy</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="schools" id="cynicy" value="cynicy">
+                            <label for="cynicy">Cynicy</label>
+                        </span>
+                        <label class="poll__question_label" for="favPhilosopher">Jaki jest twój ulubiony
+                            filozof?</label>
+                        <input type="text" id="favPhilosopher" name="favPhilosopher">
+                        <label class="poll__question_label" for="impDay1">Jaki jest, twoim zdaniem, najważniejszy dzień
+                            w
+                            historii ludzkości?</label>
+                        <input type="date" id="impDay1" name="impDay1" value="1971-01-24">
+                        <label class="poll__question_label" for="impDay2">Cos się wtedy wydarzyło?</label>
+                        <input type="text" id="impDay2" name="impDay2">
+                    </fieldset>
+                    <input type="submit" value="Prześlij">
+                    <input type="reset" value="Wyczyść">
+                </form>
             </section>
         </div>
     </div>
