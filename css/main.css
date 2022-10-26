@@ -184,6 +184,58 @@ input {
     display: inline-block;
 }
 
+.navigation__checkbox {
+    display: none;
+}
+
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+    display: none;
+    width: 5rem;
+    height: 0.2rem;
+    background-color: black;
+}
+
+.navigation__icon::before,
+.navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+}
+
+.navigation__icon {
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.navigation__icon::before {
+    left: 0;
+    top: -1.6rem;
+}
+
+.navigation__icon::after {
+    top: 1.6rem;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon {
+    background-color: transparent;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+}
+
 .poll fieldset {
     display: flex;
     flex-direction: column;
@@ -199,5 +251,59 @@ input {
 @media only screen and (max-width: 960px) {
     .hero {
         background-attachment: scroll;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .navigation__list {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        display: none;
+    }
+
+    .navigation__checkbox:checked~.navigation__list {
+        display: flex;
+    }
+
+    .navigation__list__element {
+        margin: 1rem 0;
+        font-size: 4rem;
+    }
+
+    .navigation__list>.navigation__list__element:last-child {
+        margin-left: 0;
+    }
+
+    .navigation__dropdown__submenu {
+        position: static;
+        display: none;
+    }
+
+    .navigation__dropdown__checkbox:checked~ul.navigation__dropdown__submenu {
+        visibility: visible;
+        opacity: 100%;
+        display: block;
+    }
+
+    .navigation__dropdown {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .navigation__dropdown__label>svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .navigation__icon,
+    .navigation__icon::after,
+    .navigation__icon::before {
+        display: inline-block;
     }
 }
