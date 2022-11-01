@@ -75,6 +75,17 @@ footer {
     z-index: 999;
 }
 
+footer a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 input[type="submit"],
 input[type="reset"],
 button {
@@ -285,6 +296,18 @@ input {
 }
 
 @media only screen and (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer a {
+        margin-top: 1rem;
+        position: static;
+    }
+
     .hero {
         background-attachment: scroll;
     }
