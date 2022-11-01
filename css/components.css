@@ -4,7 +4,6 @@
     padding: 3rem;
     margin-bottom: 3.5rem;
     position: relative;
-    overflow: hidden;
     margin: 3rem;
     max-width: 70vw;
 }
@@ -74,6 +73,25 @@
     object-fit: cover;
 }
 
+.quote__hidden_photo {
+    display: none;
+    height: 4.5rem;
+    width: 4.5rem;
+    object-fit: contain;
+}
+
+.quote__photo:hover~.quote__hidden_photo,
+.quote__photo:focus~.quote__hidden_photo,
+.quote__photo:active~.quote__hidden_photo {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(15);
+    z-index: 999;
+}
+
 .quote__user-box {
     display: flex;
     justify-content: center;
@@ -93,8 +111,8 @@
     position: absolute;
     width: 1rem;
     height: 1rem;
-    top: -3rem;
-    left: 0;
+    bottom: 10rem;
+    right: 7rem;
     font-size: 20rem;
     color: #f4f2f2;
     font-family: sans-serif;
