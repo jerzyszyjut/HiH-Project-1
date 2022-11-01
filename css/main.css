@@ -72,6 +72,7 @@ footer {
     bottom: 0;
     text-align: center;
     background-color: var(--color-primary);
+    z-index: 999;
 }
 
 input[type="submit"],
@@ -270,6 +271,11 @@ input {
 
 .poll__question_label {
     padding-top: 1rem;
+}
+
+.quotes {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 960px) {
