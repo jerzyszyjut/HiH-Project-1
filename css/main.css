@@ -330,6 +330,8 @@ input {
 
     .navigation__list__element {
         margin: 1rem 0;
+        padding: 0;
+        width: 100%;
         font-size: 4rem;
     }
 
@@ -343,6 +345,7 @@ input {
     }
 
     .navigation__dropdown__checkbox:checked~ul.navigation__dropdown__submenu {
+        width: 95%;
         visibility: visible;
         opacity: 100%;
         display: block;
