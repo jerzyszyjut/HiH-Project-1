@@ -47,6 +47,12 @@ a:hover {
     min-height: 20rem;
 }
 
+#hero3 {
+    background-image: url('../images/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg');
+    min-height: 40rem;
+    background-position: top;
+}
+
 .content {
     padding: 2rem 10vw;
     font-size: 2rem;
@@ -79,6 +85,20 @@ button {
     border-radius: 2rem;
     margin: 1rem;
     font-size: 2rem;
+    transition: all 0.2s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    transform: translateY(-0.5rem);
+    cursor: pointer;
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active {
+    transform: translateY(-0.2rem);
 }
 
 input {
