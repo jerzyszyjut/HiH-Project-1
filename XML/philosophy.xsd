@@ -1,12 +1,6 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
-	<xs:element name="hipertext" type="hipertextType"/> 
-	
-	<xs:complexType name="hipertextType">
-		<xs:sequence>
-			<xs:element name="philosophers" type="philosophersType" minOccurs="1" maxOccurs="1"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="philosophers" type="philosophersType"/> 
 
 	<xs:complexType name="philosophersType">
 		<xs:sequence>
