@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE philosophers SYSTEM "philosophy.dtd">
 <philosophers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="philosophy.xsd">
     <philosopher group="presokratycy">
         <personalInfo>
