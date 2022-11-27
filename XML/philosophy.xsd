@@ -17,9 +17,7 @@
 	<xs:complexType name="philosopherType">
 		<xs:sequence>
 			<xs:element name="personalInfo" type="personalInfoType" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="tags" minOccurs="1" maxOccurs="1">
-				
-			</xs:element>
+			<xs:element ref="tags" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="books" minOccurs="0" maxOccurs="1">
 				<xs:complexType>
 					<xs:sequence>
@@ -54,15 +52,31 @@
 
 	<xs:complexType name="personalInfoType">
 		<xs:sequence>
-			<xs:element name="fullName" type="shortString" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="fullName" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="shortString">
+							<xs:attribute name="lang" type="xs:language" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="birth" type="dateType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="death" type="dateType" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="birthplace" type="shortString" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="birthplace" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="shortString">
+							<xs:attribute ref="country" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="image" minOccurs="1" maxOccurs="1">
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="shortString">
-							<xs:attribute name="source" type="longString" use="required"/>
+							<xs:attribute ref="source" use="required"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -103,13 +117,13 @@
 
 	<xs:complexType name="wikipediaType">
 		<xs:choice>
-			<xs:element name="plLink" type="link" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="enLink" type="link" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="plLink" type="link" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="enLink" type="link" minOccurs="1" maxOccurs="1"/>
 		</xs:choice>
 	</xs:complexType>
 
 	<xs:complexType name="link">
-		<xs:attribute name="source" type="longString" use="required"/>
+		<xs:attribute ref="source" use="required"/>
 	</xs:complexType>
 
 	<xs:complexType name="dateType">
@@ -179,5 +193,19 @@
 		</xs:restriction>
     </xs:simpleType>
 
-	<xs:attribute name="source" type="longString"/>
+	<xs:attribute name="source" type="xs:anyURI"/>
+
+	<xs:attribute name="country" type="shortString"/>
+
+	<xs:element name="tags">
+		<xs:simpleType>
+			<xs:list>
+				<xs:simpleType>
+					<xs:restriction base="longString">
+						<xs:minLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:list>
+		</xs:simpleType>		
+	</xs:element>
 </xs:schema>

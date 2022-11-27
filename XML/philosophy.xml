@@ -3,36 +3,38 @@
     <philosophers>
         <philosopher group="presokratycy">
             <personalInfo>
-                <fullName>Pitagoras z Samos</fullName>
+                <fullName lang="pl">Pitagoras z Samos</fullName>
+                <fullName lang="en">Pythagoras</fullName>
                 <birth era="BC">570</birth>
                 <death era="BC">495</death>
-                <birthplace>Samos</birthplace>
+                <birthplace country="Greece">Samos</birthplace>
                 <image source="./images/pitagoras.jpg">Pitagoras painting</image>
                 <wikipedia>
                     <plLink source="https://pl.wikipedia.org/wiki/Pitagoras"/>
                 </wikipedia>
             </personalInfo>
             <tags>
-                <tag>liczba</tag>
-                <tag>kosmos</tag>
-                <tag>misteria orfickie</tag>
+                liczba
+                kosmos
+                misteria orfickie
             </tags>
         </philosopher>
         <philosopher group="sokratycy">
             <personalInfo>
-                <fullName>Platon</fullName>
+                <fullName lang="pl">Platon</fullName>
+                <fullName lang="en">Plato</fullName>
                 <birth era="BC">428</birth>
                 <death era="BC">348</death>
-                <birthplace>Ateny</birthplace>
+                <birthplace country="Greece">Ateny</birthplace>
                 <image source="./images/platon.jpg">Platon painting</image>
                 <wikipedia>
                     <plLink source="https://pl.wikipedia.org/wiki/Platon"/>
                 </wikipedia>
             </personalInfo>
             <tags>
-                <tag>dialog</tag>
-                <tag>idealizm</tag>
-                <tag>jaskinia platona</tag>
+                dialog
+                idealizm
+                jaskinia platona
             </tags>
             <books>
                 <book>
@@ -53,6 +55,47 @@
                 <quote>
                     <text>
                         "Wiedza to wiedza, że nic nie wiemy."
+                    </text>
+                </quote>
+            </quotes>
+        </philosopher>
+        <philosopher group="pozostali">
+            <personalInfo>
+                <fullName lang="pl">Fryderyk Nietzsche</fullName>
+                <fullName lang="en">Friedrich Nietzsche</fullName>
+                <birth era="AD">1844</birth>
+                <death era="AD">1900</death>
+                <birthplace country="Germany">Röcken</birthplace>
+                <image source="./images/nietzsche.jpg">Nietzsche painting</image>
+                <wikipedia>
+                    <plLink source="https://pl.wikipedia.org/wiki/Fryderyk_Nietzsche"/>
+                </wikipedia>
+            </personalInfo>
+            <tags>
+                egzystencjalizm
+                nihilizm
+                dekadencja
+                nadczłowiek
+            </tags>
+            <books>
+                <book>
+                    <title>Antychryst</title>
+                    <description>
+                        Antychryst to książka Friedricha Nietzschego, w której autor przedstawia swoje poglądy na temat chrześcijaństwa, jego wad i zalet.
+                    </description>
+                    <availableInLibraries>
+                        <libraryQuantity name="Prywatny księgozbiór">Brak</libraryQuantity>
+                        <libraryQuantity name="Biblioteka PG">1</libraryQuantity>
+                    </availableInLibraries>
+                    <wikipedia>
+                        <enLink source="https://en.wikipedia.org/wiki/The_Antichrist_(book)"/>
+                    </wikipedia>
+                </book>
+            </books>
+            <quotes>
+                <quote>
+                    <text>
+                        "Gott ist tot"
                     </text>
                 </quote>
             </quotes>
