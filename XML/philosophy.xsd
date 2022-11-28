@@ -45,6 +45,10 @@
 	</xs:complexType>
 
 	<xs:complexType name="personalInfoType">
+		<xs:group ref="personalInfoGroup"/>
+	</xs:complexType>
+
+	<xs:group name="personalInfoGroup">
 		<xs:sequence>
 			<xs:element name="fullName" minOccurs="1" maxOccurs="unbounded">
 				<xs:complexType mixed="true">
@@ -76,7 +80,7 @@
 			</xs:element>
 			<xs:element name="wikipedia" type="wikipediaType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
-	</xs:complexType>
+	</xs:group>
 
 	<xs:complexType name="bookType">
 		<xs:all>
