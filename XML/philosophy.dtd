@@ -14,8 +14,9 @@
 <!ATTLIST plLink source CDATA #REQUIRED>
 <!ELEMENT enLink EMPTY>
 <!ATTLIST enLink source CDATA #REQUIRED>
-<!ELEMENT fullName (#PCDATA)>
+<!ELEMENT fullName (#PCDATA|shortName)*>
 <!ATTLIST fullName lang CDATA "pl">
+<!ELEMENT shortName (#PCDATA)>
 <!ELEMENT birth (#PCDATA)>
 <!ATTLIST birth %era;>
 <!ELEMENT death (#PCDATA)>

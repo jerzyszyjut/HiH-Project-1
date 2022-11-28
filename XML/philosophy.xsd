@@ -47,12 +47,11 @@
 	<xs:complexType name="personalInfoType">
 		<xs:sequence>
 			<xs:element name="fullName" minOccurs="1" maxOccurs="unbounded">
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="shortString">
-							<xs:attribute name="lang" type="xs:language" use="required"/>
-						</xs:extension>
-					</xs:simpleContent>
+				<xs:complexType mixed="true">
+					<xs:sequence>
+						<xs:element name="shortName" type="shortString"/>
+					</xs:sequence>
+					<xs:attribute name="lang" type="xs:language" use="required"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="birth" type="dateType" minOccurs="1" maxOccurs="1"/>

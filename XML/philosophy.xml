@@ -3,8 +3,12 @@
 <philosophers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="philosophy.xsd">
     <philosopher group="presokratycy">
         <personalInfo>
-            <fullName lang="pl">Pitagoras z Samos</fullName>
-            <fullName lang="en">Pythagoras</fullName>
+            <fullName lang="pl">
+                <shortName>Pitagoras</shortName> z Samos
+            </fullName>
+            <fullName lang="en">
+                <shortName>Pythagoras</shortName>
+            </fullName>
             <birth era="BC">570</birth>
             <death era="BC">495</death>
             <birthplace country="Greece">Samos</birthplace>
@@ -21,8 +25,12 @@
     </philosopher>
     <philosopher group="sokratycy">
         <personalInfo>
-            <fullName lang="pl">Platon</fullName>
-            <fullName lang="en">Plato</fullName>
+            <fullName lang="pl">
+                <shortName>Platon</shortName>
+            </fullName>
+            <fullName lang="en">
+                <shortName>Plato</shortName>
+            </fullName>
             <birth era="BC">428</birth>
             <death era="BC">348</death>
             <birthplace country="Greece">Ateny</birthplace>
@@ -61,8 +69,13 @@
     </philosopher>
     <philosopher group="pozostali">
         <personalInfo>
-            <fullName lang="pl">Fryderyk Nietzsche</fullName>
-            <fullName lang="en">Friedrich Nietzsche</fullName>
+            <fullName lang="pl">
+                Fryderyk 
+                <shortName>Nietzsche</shortName>
+            </fullName>
+            <fullName lang="en">
+                Friedrich <shortName>Nietzsche</shortName>
+            </fullName>
             <birth era="AD">1844</birth>
             <death era="AD">1900</death>
             <birthplace country="Germany">Röcken</birthplace>
